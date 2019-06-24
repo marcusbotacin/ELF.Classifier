@@ -1,0 +1,3 @@
+tests/hello.bin
+tests/add.bin
+tests/mul.bin
