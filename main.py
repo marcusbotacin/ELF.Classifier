@@ -19,7 +19,7 @@ import os
 def retrieval():
     # Use argparse to get argument files, https://docs.python.org/3/library/argparse.html
     # Files should contain paths to goodware, malware and/or suspicious binaries
-    parser = argparse.ArgumentParser(description = 'Forsite malware classifier.',usage='%(prog)s [-hgms] [ARGS]')
+    parser = argparse.ArgumentParser(description = 'Forseti malware classifier.',usage='%(prog)s [-hgms] [ARGS]')
     parser.add_argument('-g','--goodware',type=argparse.FileType('r'),metavar='',help="Text file with benign binaries path's")
     parser.add_argument('-m','--malware',type=argparse.FileType('r'),metavar='',help="Text file with malicious binaries path's")
     parser.add_argument('-s','--suspicious',type=argparse.FileType('r'),metavar='',help="Text file with unknown binaries path's")
@@ -37,14 +37,14 @@ def retrieval():
         for path in args.goodware:
             goodware.append(binaries.Binary(path[:-1],"goodware"))
     except:
-        print('ERROR: \{MAIN.PY\} Forsite set to validation in configuration file. Lack of text file with benign paths.')
+        print('ERROR: \{MAIN.PY\} Forseti set to validation in configuration file. Lack of text file with benign paths.')
         parser.print_help()
         exit(1)
     try:
         for path in args.malware:
             malware.append(binaries.Binary(path[:-1],"malware"))
     except:
-        print('ERROR: \{MAIN.PY\} Forsite set to validation in configuration file. Lack of text file with malware paths.')
+        print('ERROR: \{MAIN.PY\} Forseti set to validation in configuration file. Lack of text file with malware paths.')
         parser.print_help()
         exit(1)
 
