@@ -31,7 +31,7 @@ def retrieval():
 
     # Opens config file with user configurations
     config = ConfigParser.RawConfigParser()
-    config.read('forsite.conf')
+    config.read('forseti.conf')
 
     try:
         for path in args.goodware:
@@ -79,7 +79,7 @@ goodware,malware,suspicious = retrieval()
 
 # Opens config file with user configurations
 config = ConfigParser.RawConfigParser()
-config.read('forsite.conf')
+config.read('forseti.conf')
 
 ##############################################
 #                                            #

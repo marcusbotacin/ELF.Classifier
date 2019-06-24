@@ -92,7 +92,7 @@ class Binary:
     def pickleDump(self):
         # Open user configuration file
         config = ConfigParser.RawConfigParser()
-        config.read('forsite.conf')
+        config.read('forseti.conf')
         exists = os.path.isfile(config.get('Classifier','Binary-pickle')+os.path.basename(self.elf))
         if (exists):
             # Dont dump
@@ -112,7 +112,7 @@ class Binary:
     def pickleLoad(self):
         # Open user configuration file
         config = ConfigParser.RawConfigParser()
-        config.read('forsite.conf')
+        config.read('forseti.conf')
         exists = os.path.isfile(config.get('Classifier','Binary-pickle')+os.path.basename(self.elf))
         if (not exists):
             # Dont load
@@ -133,7 +133,7 @@ class Binary:
     def dynamicDump(self):
         # Open user configuration file
         config = ConfigParser.RawConfigParser()
-        config.read('forsite.conf')
+        config.read('forseti.conf')
         exists = os.path.isfile(config.get('Classifier','Dynamic-pickle')+os.path.basename(self.elf))
         if (exists):
             # Dont dump
@@ -153,7 +153,7 @@ class Binary:
     def dynamicLoad(self):
         # Open user configuration file
         config = ConfigParser.RawConfigParser()
-        config.read('forsite.conf')
+        config.read('forseti.conf')
         exists = os.path.isfile(config.get('Classifier','Dynamic-pickle')+os.path.basename(self.elf))
         if (not exists):
             # Dont load

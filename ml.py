@@ -126,7 +126,7 @@ class MachineLearing:
 
     def test(self,suspicious):
         config = ConfigParser.RawConfigParser()
-        config.read('forsite.conf')
+        config.read('forseti.conf')
 
         if(config.get('Classifier','Analysis') == 'Static'):
             if(config.get('Classifier','Features') == 'Discrete'):
@@ -160,7 +160,7 @@ class MachineLearing:
         # Appends binaries into different list, one for features and another for labels
         # Opens config file with user configurations
         config = ConfigParser.RawConfigParser()
-        config.read('forsite.conf')
+        config.read('forseti.conf')
         if(config.get('Classifier','Analysis') == 'Static'):
             if(config.get('Classifier','Features') == 'Discrete'):
                 for binary in (goodware + malware):
