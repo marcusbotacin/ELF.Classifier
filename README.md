@@ -66,6 +66,16 @@ Or, automate everything using our script:
 ./run-forsite.sh
 ```
 
+## Usage Example
+
+If you start Forseti using the previously presented parameters, you should see a screen like this:
+
+![Forseti Execution Example](figs/forseti.png)
+
+Notice that Forseti: (i) initially displays the feature vectors for all considered binaries;
+(ii) display all parameters used for the selected classifier; and (iii) finally starts displaying
+the classification metrics for each folding step.
+
 ## Forseti Internals
 
 If you want to take a look on how Forseti extracts features, you might want to look:
